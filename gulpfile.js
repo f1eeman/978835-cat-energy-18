@@ -7,6 +7,7 @@ var sass = require("gulp-sass");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
+var imagemin = require("gulp-imagemin");
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -19,6 +20,16 @@ gulp.task("css", function () {
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("source/css"))
     .pipe(server.stream());
+});
+
+gulp.task("images", function () {
+  return gulp.src("source/img/**/*.{png,jpg,svg}")
+    .pipe(imagemin([
+      imagemin.optipng({optimizationLevel: 7}),
+      imagemin.jpegtran({progressive: true}),
+      imagemin.svgo()
+    ]))
+    .pipe(gulp.dest("source/img"));
 });
 
 gulp.task("server", function () {
