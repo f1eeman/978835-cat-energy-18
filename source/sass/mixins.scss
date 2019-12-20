@@ -13,10 +13,18 @@
 @mixin list-reset() {
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
-//Лечит проблему поведения свг элемента, как ссылки, при нажатии
+@mixin button-reset() {
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+}
+
+//Лечит проблему поведения SVG элемента, как ссылки, при нажатии в IE11
 @mixin ie-bug-fix() {
   position: relative;
 
@@ -33,17 +41,17 @@
   }
 }
 
-@mixin mobile-view($mobile-width: 320px, $mobile-padding: 0 30px,) {
+@mixin mobile-view($mobile-width: 320px, $mobile-padding: 0 20px) {
   width: $mobile-width;
   padding: $mobile-padding;
 }
 
-@mixin tablet-view($mobile-width: 768px, $mobile-padding: 0 50px,) {
-  width: $mobile-width;
-  padding: $mobile-padding;
+@mixin tablet-view($tablet-width: 768px, $tablet-padding: 0 30px) {
+  width: $tablet-width;
+  padding: $tablet-padding;
 }
 
-@mixin desktop-view($mobile-width: 1150px, $mobile-padding: 0 50px,) {
-  width: $mobile-width;
-  padding: $mobile-padding;
+@mixin desktop-view($desktop-width: 1150px, $desktop-padding: 0 40px) {
+  width: $desktop-width;
+  padding: $desktop-padding;
 }

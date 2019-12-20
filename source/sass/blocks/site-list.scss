@@ -1,0 +1,21 @@
+.site-list {
+  padding: 0;
+
+  list-style: none;
+}
+
+.site-list__link {
+  @include text(20px, 20px, 500);
+
+  color: $secondary-color-text;
+  text-transform: uppercase;
+
+  &[href]:hover,
+  &[href]:focus {
+    color: $secondary-color-text-hover;
+  }
+
+  &[href]:active {
+    color: $secondary-color-text-active;
+  }
+}
