@@ -32,63 +32,63 @@
     </header>
     <main class="page-main">
       <h1 class="page-main__title">Подбор программы</h1>
-      <section сlass="page-main__filters filters">
+      <section class="page-main__filters filters">
         <h2 class="filters__title visually-hidden">Форма заказа</h2>
-        <p сlass="filters__info">Заполните анкету и мы подберем  программу питания для вашего кота</p>
+        <p class="filters__info">Заполните анкету и мы подберем  программу питания для вашего кота</p>
         <form class="filters__filter-form filter-form" action="https://echo.htmlacademy.ru" method="POST">
-          <fieldset сlass="filter-form__fieldset">
-            <h3 сlass="filter-form__title visually-hidden">Данные котика</h3>
-            <p сlass="filter-form__wrap">
+          <fieldset class="filter-form__fieldset">
+            <h3 class="filter-form__title visually-hidden">Данные котика</h3>
+            <p class="filter-form__wrap">
               <label class="filter-form__label" for="user-name">Имя:*</label>
               <input class="filter-form__control" id="user-name" name="user-name" type="text" placeholder="Барсик" required>
             </p>
-            <p сlass="filter-form__wrap">
+            <p class="filter-form__wrap">
               <label class="filter-form__label" for="user-weight">Вес(кг):*</label>
               <input class="filter-form__control" id="user-weight" name="user-weight" type="number" placeholder="7" required>
             </p>
-            <p сlass="filter-form__wrap">
+            <p class="filter-form__wrap">
               <label class="filter-form__label" for="user-age">Возраст (лет):</label>
               <input class="filter-form__control" id="user-age" name="user-age" type="number" placeholder="7">
             </p>
           </fieldset>
-          <fieldset сlass="filter-form__fieldset">
-            <h3 сlass="filter-form__title visually-hidden">Выбор программы</h3>
+          <fieldset class="filter-form__fieldset">
+            <h3 class="filter-form__title visually-hidden">Выбор программы</h3>
             <ul class="filter-form__list">
               <li class="filter-form__item">
-                <input class="filter-form__control filter-form__control--radio visually-hidden" id="losing-weight" name="losing-weight" type="radio" checked>
-                <label сlass="filter-form__label filter-form__label--radio" for="losing-weight">Похудение</label>
+                <input class="filter-form__control filter-form__control--radio visually-hidden" id="losing-weight" name="nutrition-program" type="radio"  value="losing-weight" checked>
+                <label class="filter-form__label filter-form__label--radio" for="losing-weight">Похудение</label>
               </li>
               <li class="filter-form__item">
-                <input class="filter-form__control filter-form__control--radio visually-hidden" id="muscle-gain" name="muscle-gain" type="radio">
-                <label сlass="filter-form__label filter-form__label--radio" for="muscle-gain">Набор массы</label>
+                <input class="filter-form__control filter-form__control--radio visually-hidden" id="muscle-gain" name="nutrition-program" type="radio" value="muscle-gain">
+                <label class="filter-form__label filter-form__label--radio" for="muscle-gain">Набор массы</label>
               </li>
               <li class="filter-form__item">
-                <input class="filter-form__control filter-form__control--radio visually-hidden" id="need-advice" name="need-advice" type="radio">
-                <label сlass="filter-form__label filter-form__label--radio" for="need-advice">Не знаю (нужен ваш совет)</label>
+                <input class="filter-form__control filter-form__control--radio visually-hidden" id="need-advice" name="nutrition-program" type="radio" value="need-advice">
+                <label class="filter-form__label filter-form__label--radio" for="need-advice">Не знаю (нужен ваш совет)</label>
               </li>
             </ul>
           </fieldset>
-          <fieldset сlass="filter-form__fieldset">
-            <h3 сlass="filter-form__title">Контактные данные (владельца кота)</h3>
-            <p сlass="filter-form__wrap">
+          <fieldset class="filter-form__fieldset">
+            <h3 class="filter-form__title">Контактные данные (владельца кота)</h3>
+            <p class="filter-form__wrap">
               <label class="filter-form__label" for="user-email">Email:*</label>
               <input class="filter-form__control" id="user-email" name="user-email" type="email" placeholder="kuklachev@gmail.com" required>
             </p>
-            <p сlass="filter-form__wrap">
+            <p class="filter-form__wrap">
               <label class="filter-form__label" for="user-tel">Телефон:*</label>
               <input class="filter-form__control" id="user-tel" name="user-tel" type="tel" placeholder="8(960) 900-60-90" required>
             </p>
           </fieldset>
-          <fieldset сlass="filter-form__fieldset">
-            <h3 сlass="filter-form__title">Комментарий</h3>
+          <fieldset class="filter-form__fieldset">
+            <h3 class="filter-form__title">Комментарий</h3>
             <p class="filter-form__wrap">
               <label class="filter-form__label filter-form__label--textarea visually-hidden" for="user-comment">Комментарий:</label>
               <textarea class="filter-form__control filter-form__control--textarea" name="user-comment" id="user-comment" placeholder="Расскажите обо всех повадках кота"></textarea>
             </p>
           </fieldset>
-          <fieldset сlass="filter-form__fieldset">
-            <h3 сlass="filter-form__title">Дополнительно</h3>
-            <ul сlass="filter-form__list">
+          <fieldset class="filter-form__fieldset">
+            <h3 class="filter-form__title">Дополнительно</h3>
+            <ul class="filter-form__list">
               <li class="filter-form__item">
                 <input class="filter-form__control filter-form__control--checkbox visually-hidden" id="sweetener" name="sweetener" type="checkbox" checked>
                 <label class="filter-form__label filter-form__label--checkbox" for="sweetener">Сахарозаменитель</label>
@@ -111,7 +111,9 @@
           <p class="filter-form__note">*Поля обязательны для заполнения</p>
         </form>
       </section>
-      <section class="page-main__contacts contacts">
+    </main>
+    <footer class="page-footer">
+      <section class="page-footer__contacts contacts">
         <h2 class="contacts__title visually-hidden">Контакты</h2>
         <section class="contacts__dealers dealers-info">
           <h3 class="dealers-info__title">Приглашаем  к сотрудничеству  дилеров!</h3>
@@ -133,38 +135,40 @@
           </div>
         </div>
       </section>
-    </main>
-    <footer class="page-footer">
-      <div class="page-footer__container container">
-        <div class="page-footer__logo"></div>
-          <a class="page-footer__logo-link" href="index.html">
-            <img class="page-footer__logo-image" src="img/logo-footer.svg" width="128" height="24" alt="Интернет-магазин фитнес еды для котиков «Cat Energy»">
-          </a>
-        <div class="page-footer__social social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="https://www.vk.com/htmlacademy">
-                <span class="visually-hidden">Мы в Вконтакте</span>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
-                <span class="visually-hidden">Мы в Инстаграме</span>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
-                <span class="visually-hidden">Мы в Фейсбуке</span>
-              </a>
-            </li>
-          </ul>
+      <section class="page-footer__about-us about-us">
+        <h2 class="about-us__title visually-hidden">Информация о нас</h2>
+        <div class="about-us__container container">
+          <div class="about-us__logo">
+            <a class="about-us__logo-link">
+              <img class="about-us__logo-image" src="img/logo-footer.svg" width="128" height="24" alt="Интернет-магазин фитнес еды для котиков «Cat Energy»">
+            </a>
+          </div>
+          <div class="about-us__social social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link social__link--vkontakte" href="https://www.vk.com/htmlacademy">
+                  <span class="visually-hidden">Мы в Вконтакте</span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
+                  <span class="visually-hidden">Мы в Инстаграме</span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
+                  <span class="visually-hidden">Мы в Фейсбуке</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="about-us__copyright copyright">
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+              <span class="copyright__text">HTML Academy</span>
+            </a>
+          </div>
         </div>
-        <div class="page-footer__copyright copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <span class="copyright__text">HTML Academy</span>
-          </a>
-        </div>
-      </div>
+      </section>
     </footer>
   </body>
 </html>
