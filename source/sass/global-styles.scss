@@ -1,0 +1,32 @@
+html,
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+
+  font-style: normal;
+
+  @include text();
+  font-family: $main-font;
+  color: $main-color-text;
+
+  background-color: $color-main-bg;
+}
+
+img {
+  @include size-img();
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
