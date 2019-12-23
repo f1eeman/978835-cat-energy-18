@@ -19,3 +19,30 @@
     color: $secondary-color-text-active;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .site-list__link {
+    @include text(18px, 25px, 400);
+    color: $fourth-color-text;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-list {
+    background-color: $secondary-color-bg;
+  }
+
+  .site-list__link {
+    @include text(20px, 25px, 400);
+    color: $third-color-text;
+  }
+
+  &[href]:hover,
+  &[href]:focus {
+    color: $third-color-text-hover;
+  }
+
+  &[href]:active {
+    color: $third-color-text-active;
+  }
+}

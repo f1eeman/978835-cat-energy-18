@@ -1,6 +1,18 @@
 $main-font: "Oswald", "Arial", sans-serif;
+$sectondary-font: "Arial", "Tahoma", sans-serif;
 $main-color-text: rgb(68, 68, 68);
 $secondary-color-text: rgb(17, 17, 17);
 $secondary-color-text-hover: rgba(17, 17, 17, 0.6);
 $secondary-color-text-active: rgba(17, 17, 17, 0.3);
+$third-color-text: rgb(255, 255, 255);
+$third-color-text-hover: rgba(255, 255, 255, 0.6);
+$third-color-text-active: rgba(255, 255, 255, 0.3);
+$fourth-color-text: rgb(34, 34, 34);
 $color-main-bg: rgb(255, 255, 255);
+$secondary-color-bg: rgb(104, 183, 56);
+$secondary-color-bg-hover: rgb(94, 170, 47);
+$third-color-bg: rgb(242, 242, 242);
+$mobile-width: 320px;
+$mobile-width-only: 320px;
+$tablet-width: 768px;
+$desktop-width: 1300px;

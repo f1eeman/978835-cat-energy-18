@@ -1,0 +1,35 @@
+.product-package {
+  background-color: $third-color-bg;
+}
+
+.product-package__title {
+  @include text(24px, 37px, 400);
+  color: $secondary-color-text;
+}
+
+.product-package__description {
+  font-family: $sectondary-font;
+}
+
+.product-package__link {
+  @include text(16px, 16px, 400);
+  color: $secondary-color-text;
+
+  &:active {
+    color: $secondary-color-text-active;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .product-package__title {
+    @include text(36px, 37px, 400);
+  }
+
+  .product-package__description {
+    @include text(16px, 24px, 400);
+  }
+
+  .product-package__link {
+    @include text(20px, 20px, 400);
+  }
+}

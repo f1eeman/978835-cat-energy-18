@@ -1,0 +1,15 @@
+.button {
+  color: $third-color-text;
+  text-transform: uppercase;
+
+  background-color: $secondary-color-bg;
+
+  &:hover,
+  &:focus {
+    background-color: $secondary-color-bg-hover;
+  }
+
+  &:active {
+    color: $third-color-text-active;
+  }
+}
