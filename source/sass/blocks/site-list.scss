@@ -22,7 +22,7 @@
 
 @media (min-width: $tablet-width) {
   .site-list__link {
-    @include text(18px, 25px, 400);
+    @include text(18px, 25px);
     color: $fourth-color-text;
   }
 }
@@ -33,7 +33,7 @@
   }
 
   .site-list__link {
-    @include text(20px, 25px, 400);
+    @include text(20px, 25px);
     color: $third-color-text;
   }
 

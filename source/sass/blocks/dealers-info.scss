@@ -1,0 +1,19 @@
+.dealers-info__title {
+  @include text(16px, 20px);
+  color: $secondary-color-text;
+}
+
+.dealers-info__address {
+  @include text(14px, 20px);
+  font-family: $secondary-font;
+}
+
+@media (min-width: $tablet-width) {
+  .dealers-info__title {
+    @include text(20px, 25px);
+  }
+
+  .dealers-info__address {
+    @include text(16px, 20px);
+  }
+}

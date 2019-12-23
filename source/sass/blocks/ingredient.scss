@@ -1,0 +1,24 @@
+.ingredient__title {
+  @include text(16px, 16px);
+  color: $secondary-color-text;
+  text-transform: uppercase;
+}
+
+.ingredient__properties {
+  @include text(14px, 14px);
+  font-family: $secondary-font;
+}
+
+.ingredient__make-order {
+  @include text(16px, 20px);
+}
+
+@media (min-width: $tablet-width) {
+  .ingredient__title {
+    @include text(20px, 20px);
+  }
+
+  .ingredient__properties {
+    @include text(16px, 20px);
+  }
+}

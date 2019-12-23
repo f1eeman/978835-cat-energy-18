@@ -1,0 +1,13 @@
+.advantages__list {
+  @include list-reset();
+}
+
+.advantages__item {
+  font-family: $secondary-font;
+}
+
+@media (min-width: $tablet-width) {
+  .advantages__item {
+    @include text(16px, 24px);
+  }
+}

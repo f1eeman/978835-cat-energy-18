@@ -1,0 +1,14 @@
+.additional-goods__list {
+  @include list-reset();
+}
+
+.additional-goods__title {
+  @include text(24px, 24px);
+  color: $secondary-color-text;
+}
+
+@media (min-width: $tablet-width) {
+  .additional-goods__title {
+    @include text(36px, 36px);
+  }
+}

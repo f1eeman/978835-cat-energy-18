@@ -1,6 +1,7 @@
 $main-font: "Oswald", "Arial", sans-serif;
-$sectondary-font: "Arial", "Tahoma", sans-serif;
+$secondary-font: "Arial", "Tahoma", sans-serif;
 $main-color-text: rgb(68, 68, 68);
+$main-color-text-active: rgba(68, 68, 68, 0.3);
 $secondary-color-text: rgb(17, 17, 17);
 $secondary-color-text-hover: rgba(17, 17, 17, 0.6);
 $secondary-color-text-active: rgba(17, 17, 17, 0.3);
@@ -12,6 +13,7 @@ $color-main-bg: rgb(255, 255, 255);
 $secondary-color-bg: rgb(104, 183, 56);
 $secondary-color-bg-hover: rgb(94, 170, 47);
 $third-color-bg: rgb(242, 242, 242);
+$fourth-color-bg: rgb(235, 235, 235);
 $mobile-width: 320px;
 $mobile-width-only: 320px;
 $tablet-width: 768px;

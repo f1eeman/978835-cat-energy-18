@@ -1,0 +1,41 @@
+.catalog__list {
+  @include list-reset();
+}
+
+.catalog__item-title {
+  @include text(16px, 20px);
+  color: $secondary-color-text;
+}
+
+.catalog__item-info {
+  @include text(12px, 16px);
+  font-family: $secondary-font;
+}
+
+
+.catalog__item-show-all {
+  @include text(16px, 20px);
+  color: $main-color-text;
+  text-transform: uppercase;
+
+  background-color: $third-color-bg;
+
+  &:hover,
+  &:focus {
+    background-color: $fourth-color-bg;
+  }
+
+  &:active {
+    color: $main-color-text-active;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .catalog__item-title {
+    @include text(20px, 20px);
+  }
+
+  .catalog__item-info {
+    @include text(16px, 20px);
+  }
+}

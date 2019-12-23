@@ -1,0 +1,9 @@
+.special-offer {
+  background-color: $secondary-color-bg;
+}
+
+.special-offer__text {
+  @include text(16px, 20px);
+  font-family: $secondary-font;
+  color: $third-color-text;
+}

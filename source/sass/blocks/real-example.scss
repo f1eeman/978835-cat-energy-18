@@ -1,0 +1,43 @@
+.real-example {
+  background-color: $third-color-bg;
+}
+
+.real-example__text {
+  font-family: $secondary-font;
+}
+
+.real-example__tcell--field {
+  @include text(12px, 12px);
+  font-family: $secondary-font;
+}
+
+.real-example__tcell--value {
+  @include text(24px, 24px);
+  color: $secondary-color-text;
+  text-transform: uppercase;
+}
+
+.real-example__tcell--costs {
+  @include text(14px, 20px);
+  font-family: $main-font;
+  color: $secondary-color-text;
+  text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .real-example__text {
+    @include text(16px, 24px);
+  }
+
+  .real-example__tcell--field {
+    @include text(14px, 14px);
+  }
+
+  .real-example__tcell--value {
+    @include text(30px, 37px);
+  }
+
+  .real-example__tcell--costs {
+    @include text(20px, 20px);
+  }
+}
