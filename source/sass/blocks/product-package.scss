@@ -1,22 +1,96 @@
 .product-package {
+  position: relative;
+
+  padding-top: 30px;
+  padding-bottom: 20px;
+
+  @include mobile-padding();
+
   background-color: $third-color-bg;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: 22px;
+    top: 25px;
+
+    display: block;
+    width: 50px;
+    height: 50px;
+
+    background-color: $secondary-color-bg;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+
+    display: block;
+
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
+
+.product-package--losing-weight {
+  &::after {
+    left: 30px;
+    top: 21px;
+
+    width: 50px;
+    height: 50px;
+
+    background-image: url("../img/icon-cat-slim.svg");
+  }
+}
+
+.product-package--muscle-gain {
+  &::after {
+    left: 14px;
+    top: 36px;
+
+    width: 67px;
+    height: 28px;
+
+    background-image: url("../img/icon-cat-pro.svg");
+  }
 }
 
 .product-package__title {
+  margin-top: 0;
+  margin-left: 70px;
+  margin-bottom: 29px;
+
   @include text(24px, 37px);
   color: $secondary-color-text;
+  text-transform: uppercase;
 }
 
 .product-package__description {
+  margin: 0;
+
   font-family: $secondary-font;
 }
 
 .product-package__link {
   @include text(16px, 16px);
   color: $secondary-color-text;
+  text-transform: uppercase;
 
   &:active {
     color: $secondary-color-text-active;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .product-package__description {
+    padding-bottom: 22px;
+    margin-bottom: 19px;
+
+    border-bottom: 1px solid $color-product-package-border;
   }
 }
 

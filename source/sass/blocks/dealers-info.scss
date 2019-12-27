@@ -1,11 +1,28 @@
+.dealers-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include mobile-padding();
+  padding-top: 13px;
+  padding-bottom: 10px;
+}
+
 .dealers-info__title {
   @include text(16px, 20px);
   color: $secondary-color-text;
+  text-transform: uppercase;
 }
 
 .dealers-info__address {
+  margin-right: 5px;
+
   @include text(14px, 20px);
   font-family: $secondary-font;
+}
+
+.dealers-info__street {
+  display: block;
 }
 
 @media (min-width: $tablet-width) {

@@ -9,12 +9,22 @@ $third-color-text: rgb(255, 255, 255);
 $third-color-text-hover: rgba(255, 255, 255, 0.6);
 $third-color-text-active: rgba(255, 255, 255, 0.3);
 $fourth-color-text: rgb(34, 34, 34);
+//bg and border
+$color-nav-border: rgb(230, 230, 230);
+$color-row-border: rgb(205, 205, 205);
+$color-product-package-border: rgb(234, 234, 234);
+$color-nav-link-border: rgb(104, 183, 56);
 $color-main-bg: rgb(255, 255, 255);
 $secondary-color-bg: rgb(104, 183, 56);
 $secondary-color-bg-hover: rgb(94, 170, 47);
 $third-color-bg: rgb(242, 242, 242);
 $fourth-color-bg: rgb(235, 235, 235);
+$promo-color-bg: rgb(101, 169, 60);
+$button-close-color-bg: rgb(34, 34, 34);
+$button-close-color-bg-hover: rgba(34, 34, 34, 0.6);
+$button-close-color-bg-active: rgba(34, 34, 34, 0.3);
+//width
 $mobile-width: 320px;
-$mobile-width-only: 320px;
+$mobile-width-only: 767px;
 $tablet-width: 768px;
 $desktop-width: 1300px;

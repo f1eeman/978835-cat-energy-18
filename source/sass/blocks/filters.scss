@@ -1,0 +1,10 @@
+.filters__info {
+  color: $secondary-color-text;
+  text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .filters__info {
+    @include text(20px, 30px);
+  }
+}

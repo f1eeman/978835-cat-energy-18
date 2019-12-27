@@ -1,0 +1,16 @@
+.container {
+  @include mobile-view();
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .container {
+    @include tablet-view();
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .container {
+    @include desktop-view();
+  }
+}

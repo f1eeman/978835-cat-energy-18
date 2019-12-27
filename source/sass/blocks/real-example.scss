@@ -1,27 +1,117 @@
 .real-example {
+  padding-top: 17px;
+
   background-color: $third-color-bg;
 }
 
+.real-example__wrapper {
+  @include mobile-padding();
+}
+
+.real-example__title {
+  margin-top: 0;
+  margin-bottom: 23px;
+}
+
 .real-example__text {
+  margin-top: 0;
+  margin-bottom: 25px;
+
   font-family: $secondary-font;
+}
+
+.real-example__list {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.real-example__tbody {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.real-example__trow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 19px;
+
+  &--special {
+    width: 123px;
+  }
+
+  &--costs {
+    width: 100%;
+  }
+}
+
+.real-example__tcell {
+  display: block;
+  padding: 0;
+
+  color: $secondary-color-text;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.real-example__tcell--title {
+  width: 85px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: -10px;
+
+  background-color: $third-color-bg;
+}
+
+.real-example__tcell--special {
+  width: 100%;
+  padding-top: 13px;
+  padding-bottom: 18px;
+
+  border: 1px solid $color-row-border;
+  border-radius: 3px;
+
+  order: -1;
 }
 
 .real-example__tcell--field {
   @include text(12px, 12px);
   font-family: $secondary-font;
+  color: $main-color-text;
+  text-transform: lowercase;
 }
 
 .real-example__tcell--value {
   @include text(24px, 24px);
-  color: $secondary-color-text;
-  text-transform: uppercase;
 }
 
 .real-example__tcell--costs {
   @include text(14px, 20px);
-  font-family: $main-font;
   color: $secondary-color-text;
+  font-family: $main-font;
   text-transform: uppercase;
+
+  &:last-child {
+    margin-left: 4px;
+  }
+}
+
+.real-example__photo {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.real-example__photo-wrap {
+  width: 320px;
+  height: 240px;
+}
+
+@media (min-width: 325px) {
+  .real-example__br {
+    display: none;
+  }
 }
 
 @media (min-width: $tablet-width) {

@@ -51,7 +51,17 @@
   padding: $tablet-padding;
 }
 
-@mixin desktop-view($desktop-width: 1150px, $desktop-padding: 0 40px) {
+@mixin desktop-view($desktop-width: 1280px, $desktop-padding: 0 30px) {
   width: $desktop-width;
   padding: $desktop-padding;
+}
+
+@mixin mobile-padding($padding-left: 20px, $padding-right: 20px) {
+  padding-left: $padding-left;
+  padding-right: $padding-right;
+}
+
+@mixin tablet-padding($padding-left: 30px, $padding-right: 30px) {
+  padding-left: $padding-left;
+  padding-right: $padding-right;
 }

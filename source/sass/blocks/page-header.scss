@@ -12,3 +12,58 @@
     opacity: 0.6;
   }
 }
+
+@media (max-width: $mobile-width-only) {
+  .page-header {
+    position: relative;
+
+    text-align: center;
+  }
+
+  .page-header__wrap {
+    padding-top: 11px;
+    padding-bottom: 16px;
+
+    border-bottom: 1px solid $color-nav-border;
+  }
+
+  .page-header__container {
+    @include mobile-view();
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    padding-top: 24px;
+  }
+
+  .page-header__holder {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1280px;
+
+    @include tablet-padding();
+    margin: 0 auto;
+  }
+
+  .page-header__main-nav {
+    flex-grow: 1;
+  }
+
+  .page-header__logo {
+    width: 173px;
+    height: 58px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    padding-top: 54px;
+  }
+
+  .page-header__logo {
+    width: 202px;
+    height: 59px;
+  }
+}

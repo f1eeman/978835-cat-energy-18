@@ -1,3 +1,21 @@
+.slider__list {
+  position: relative;
+
+  min-height: 240px;
+}
+
+.slider__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: none;
+}
+
+.slider__item--show {
+  display: block;
+}
+
 .slider___toggle {
   padding: 0;
 
@@ -12,5 +30,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  @include text(20px, 20px);
+  .slider___toggle {
+    @include text(20px, 20px);
+  }
 }
