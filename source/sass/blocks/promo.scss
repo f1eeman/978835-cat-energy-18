@@ -35,46 +35,13 @@
 
     text-align: center;
 
-    &::before {
-      content: "";
-
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-
-      display: block;
-      height: 305px;
-
-      background-color: $promo-color-bg;
-      background-image: url("../img/index-background-mobile@1x.jpg");
-      background-repeat: no-repeat;
-      background-position: center 0;
-      background-size: 320px 305px;
-
-      z-index: 0;
-    }
-  }
-
-  .promo__title {
-    position: relative;
-    z-index: 1;
-  }
-
-  .promo__slogan {
-    position: relative;
-    z-index: 1;
-  }
-
-  .promo__link {
-    position: relative;
-    z-index: 1;
+    background-image: url("../img/index-background-mobile@1x.jpg"), linear-gradient($promo-color-bg);
+    background-repeat: no-repeat;
+    background-position: center 0, 0 0;
+    background-size: 320px 305px, 100% 305px;
   }
 
   .promo__image-box {
-    position: relative;
-    z-index: 1;
-
     width: 280px;
     height: 271px;
     margin-left: auto;

@@ -2,10 +2,16 @@
   background-color: $third-color-bg;
 }
 
+.about-us__container {
+  @include mobile-padding();
+}
+
 .about-us__logo-link {
   display: block;
   width: 128px;
   height: 24px;
+
+  @include centering();
 
   &[href]:hover,
   &[href]:focus {
@@ -14,5 +20,67 @@
 
   &[href]:active {
     opacity: 0.6;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .about-us__logo {
+    padding-top: 39px;
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid $color-footer-border;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .about-us {
+    padding-top: 58px;
+    padding-bottom: 58px;
+  }
+
+  .about-us__container {
+    display: flex;
+    align-items: center;
+
+    @include tablet-padding();
+  }
+
+  .about-us__social {
+    margin-left: 155px;
+  }
+
+  .about-us__copyright {
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 790px) {
+  .about-us__container {
+    justify-content: space-between;
+  }
+
+  .about-us__social {
+    margin-left: 0;
+  }
+
+  .about-us__copyright {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about-us__container {
+    justify-content: flex-start;
+
+    @include desktop-view();
+    @include centering();
+  }
+
+  .about-us__social {
+    margin-left: 412px;
+  }
+
+  .about-us__copyright {
+    margin-left: auto;
   }
 }

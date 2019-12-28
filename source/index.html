@@ -59,7 +59,7 @@
             <source type="image/webp" srcset="img/index-can-mobile@1x.webp 1x, img/index-can-mobile@2x.webp 2x">
             <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
-            <img class="real-example__photo-image slider__item" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" alt="Функциональное питание для котов «Cat Energy Pro» со вкусом курицы">
+            <img class="promo__image" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" alt="Функциональное питание для котов «Cat Energy Pro» со вкусом курицы">
           </picture>
         </div>
         <a class="promo__link button" href="form.html">Подобрать программу</a>
@@ -73,7 +73,7 @@
             <a class="product-package__link" href="losing-weight.html">
               Каталог Slim
               <svg class="product-package__icon" width="24" height="11">
-                <use xlink:href="#icon-right-arrow-long"></use>
+                <use xlink:href="img/sprite.svg#icon-right-arrow-long"></use>
               </svg>
             </a>
           </section>
@@ -83,7 +83,7 @@
             <a class="product-package__link" href="muscle-gain.html">
               Каталог pro
               <svg class="product-package__icon" width="24" height="11">
-                <use xlink:href="#icon-right-arrow-long"></use>
+                <use xlink:href="img/sprite.svg#icon-right-arrow-long"></use>
               </svg>
             </a>
           </section>
@@ -174,8 +174,8 @@
         </div>
       </section>
       <section class="page-footer__about-us about-us">
-        <h2 class="about-us__title visually-hidden">Информация о нас</h2>
-        <div class="about-us__container container">
+        <div class="about-us__container">
+          <h2 class="about-us__title visually-hidden">Информация о нас</h2>
           <div class="about-us__logo">
             <a class="about-us__logo-link">
               <img class="about-us__logo-image" src="img/logo-footer.svg" width="128" height="24" alt="Интернет-магазин фитнес еды для котиков «Cat Energy»">
@@ -183,35 +183,38 @@
           </div>
           <div class="about-us__social social">
             <ul class="social__list">
-              <li class="social__item">
+              <li class="social__item social__item--vkontakte">
                 <a class="social__link social__link--vkontakte" href="https://www.vk.com/htmlacademy">
                   <span class="visually-hidden">Мы в Вконтакте</span>
-                  <svg class="social__icon social__icon-vkontakte" width="16" height="16">
-                    <use xlink:href="#icon-insta"></use>
+                  <svg class="social__icon social__icon-vkontakte" width="22" height="12">
+                    <use xlink:href="img/sprite.svg#icon-vk"></use>
                   </svg>
                 </a>
               </li>
-              <li class="social__item">
+              <li class="social__item social__item--instagram">
                 <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
                   <span class="visually-hidden">Мы в Инстаграме</span>
                   <svg class="social__icon social__icon-instagram" width="16" height="16">
-                    <use xlink:href="#icon-insta"></use>
+                    <use xlink:href="img/sprite.svg#icon-insta"></use>
                   </svg>
                 </a>
               </li>
-              <li class="social__item">
+              <li class="social__item social__item--facebook">
                 <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
                   <span class="visually-hidden">Мы в Фейсбуке</span>
-                  <svg class="social__icon social__icon-facebook" width="16" height="16">
-                    <use xlink:href="#icon-insta"></use>
+                  <svg class="social__icon social__icon-facebook" width="10" height="19">
+                    <use xlink:href="img/sprite.svg#icon-fb"></use>
                   </svg>
                 </a>
               </li>
             </ul>
           </div>
           <div class="about-us__copyright copyright">
-            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-              <span class="copyright__text">HTML Academy</span>
+            <a class="copyright__link copyright__link--text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            <a class="copyright__link copyright__link--icon" href="https://htmlacademy.ru/intensive/adaptive">
+              <svg class="copyright__icon" width="27" height="34">
+                <use xlink:href="img/sprite.svg#htmlacademy"></use>
+              </svg>
             </a>
           </div>
         </div>

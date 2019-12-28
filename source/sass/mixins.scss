@@ -41,6 +41,15 @@
   }
 }
 
+@mixin transition-time($transition-duration: 90ms) {
+  transition-duration: $transition-duration;
+}
+
+@mixin centering() {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @mixin mobile-view($mobile-width: 320px, $mobile-padding: 0 20px) {
   width: $mobile-width;
   padding: $mobile-padding;
