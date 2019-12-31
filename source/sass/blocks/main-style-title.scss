@@ -4,5 +4,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  @include text(60px, 60px);
+  .main-style-title {
+    @include text(60px, 60px);
+  }
 }

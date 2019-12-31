@@ -5,3 +5,9 @@
 .page-main__real-example {
   padding-bottom: 83px;
 }
+
+@media (min-width: $desktop-width) {
+  .page-main__promo {
+    margin-bottom: 80px;
+  }
+}

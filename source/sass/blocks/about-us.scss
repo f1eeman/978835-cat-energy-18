@@ -41,8 +41,10 @@
   .about-us__container {
     display: flex;
     align-items: center;
+    max-width: 1280px;
 
     @include tablet-padding();
+    @include centering();
   }
 
   .about-us__social {
@@ -71,9 +73,6 @@
 @media (min-width: $desktop-width) {
   .about-us__container {
     justify-content: flex-start;
-
-    @include desktop-view();
-    @include centering();
   }
 
   .about-us__social {

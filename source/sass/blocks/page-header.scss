@@ -44,11 +44,15 @@
     max-width: 1280px;
 
     @include tablet-padding();
-    margin: 0 auto;
+    @include centering();
   }
 
   .page-header__main-nav {
     flex-grow: 1;
+  }
+
+  .page-header__wrap {
+    margin-right: 40px;
   }
 
   .page-header__logo {
@@ -65,5 +69,9 @@
   .page-header__logo {
     width: 202px;
     height: 59px;
+  }
+
+  .page-header__main-nav {
+    flex-grow: 0;
   }
 }

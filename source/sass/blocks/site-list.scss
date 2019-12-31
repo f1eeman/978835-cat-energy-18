@@ -60,8 +60,16 @@
 }
 
 @media (min-width: $desktop-width) {
-  .site-list {
-    background-color: $secondary-color-bg;
+  .site-list__item {
+    margin-left: 34px;
+
+    &:first-child {
+      margin-left: auto;
+    }
+
+    &--active .site-list__link {
+      border-bottom: 2px solid $color-main-bg;
+    }
   }
 
   .site-list__link {
