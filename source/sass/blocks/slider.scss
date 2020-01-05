@@ -8,13 +8,21 @@
   position: absolute;
   top: 0;
   left: 0;
-
-  display: none;
 }
 
-.slider__item--show {
-  display: block;
+.slider__item--before {
+  z-index: 1;
+
+  width: 50%;
 }
+
+.real-example__photo-image {
+  height: 240px;
+}
+
+// .slider__item--show {
+//   display: block;
+// }
 
 .slider___toggle {
   padding: 0;

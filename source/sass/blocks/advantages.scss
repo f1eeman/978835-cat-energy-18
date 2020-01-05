@@ -45,6 +45,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 50px 50px;
+
+    z-index: 1;
   }
 
   &--bg-leaf {
@@ -72,32 +74,50 @@
   }
 }
 
+.advantages__text {
+  position: relative;
+
+  margin: 0;
+
+  z-index: 1;
+}
+
 .advantages__br {
   display: none;
 }
 
 @media (min-width: $tablet-width) {
   .advantages {
-    padding-top: 45px;
-    // padding-bottom: 42px;
     max-width: 1280px;
+    padding-top: 45px;
+    padding-bottom: 57px;
 
     @include tablet-padding();
     @include centering();
+
+    border-bottom: 1px solid $color-nav-border;
+  }
+
+  .advantages__title {
+    margin-bottom: 72px;
   }
 
   .advantages__list {
     display: flex;
     flex-wrap: wrap;
+    margin-top: -89px;
     margin-left: -139px;
+
+    counter-reset: myCounter;
   }
 
   .advantages__item {
     display: block;
     width: 245px;
     min-height: 228px;
-    padding-top: 115px;
+    padding-top: 113px;
     padding-left: 0;
+    margin-top: 89px;
     margin-left: 139px;
     margin-bottom: 0;
 
@@ -107,6 +127,28 @@
       width: 80px;
       height: 80px;
     }
+
+    &::after {
+      position: absolute;
+      top: -40px;
+      right: 0;
+
+      display: inline-block;
+
+      @include text(281px, 281px);
+      font-family: $main-font;
+      color: $fifth-color-text;
+
+      counter-increment: myCounter;
+      content: counter(myCounter);
+      z-index: 0;
+    }
+
+    &:first-child {
+      &::after {
+        right: 15px;
+      }
+    }
   }
 
   .advantages__br {
@@ -114,13 +156,30 @@
   }
 }
 
-// @media (min-width: $desktop-width) {
-//   .advantages {
-//     padding-top: 72px;
-//     // padding-bottom: 42px;
-//     max-width: 1280px;
+@media (min-width: 790px) {
+  .advantages__item {
+    flex-shrink: 0;
+    flex-grow: 1;
+  }
+}
 
-//     @include tablet-padding();
-//     @include centering();
-//   }
-// }
+@media (min-width: $desktop-width) {
+  .advantages {
+    padding-top: 73px;
+
+    border-bottom: none;
+  }
+
+  .advantages__list {
+    margin-left: -80px;
+
+    counter-reset: myCounter;
+  }
+
+  .advantages__item {
+    flex-grow: 0;
+
+    width: 245px;
+    margin-left: 80px;
+  }
+}
