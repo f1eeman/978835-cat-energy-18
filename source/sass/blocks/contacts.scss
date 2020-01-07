@@ -1,9 +1,65 @@
-.contacts__map-box {
+.contacts__map-wrap {
   position: relative;
+
+  height: 362px;
+}
+
+.contacts__iframe-map {
+  position: relative;
+  width: 100%;
+  height: 362px;
+  border: none;
+  z-index: 1;
+}
+
+.contacts__map-box {
+  position: absolute;
+  top: 0;
+  left: 50%;
 
   width: 320px;
   height: 362px;
-  margin: 0 auto;
+  margin-left: -160px;
 
   overflow: hidden;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts__map-wrap {
+
+    height: 400px;
+  }
+
+  .contacts__iframe-map {
+    height: 400px;
+  }
+
+  .contacts__map-box {
+    width: 767px;
+    height: 400px;
+    margin-left: -384px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    position: relative;
+  }
+
+  .contacts__map-wrap {
+    overflow: hidden;
+  }
+
+  .contacts__map-box {
+    width: 1440px;
+    margin-left: -720px;
+  }
+
+  .contacts__dealers {
+    position: absolute;
+    top: 95px;
+    left: 3%;
+
+    z-index: 10;
+  }
 }

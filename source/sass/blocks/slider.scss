@@ -1,7 +1,5 @@
 .slider__list {
   position: relative;
-
-  min-height: 240px;
 }
 
 .slider__item {
@@ -12,17 +10,45 @@
 
 .slider__item--before {
   z-index: 1;
-
-  width: 50%;
 }
 
-.real-example__photo-image {
-  height: 240px;
+.slider___controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 201px;
+  padding-left: 3px;
+
+  @include centering();
 }
 
-// .slider__item--show {
-//   display: block;
-// }
+.slider__range {
+  position: relative;
+
+  order: -1;
+}
+
+.slider__scale {
+  width: 84px;
+  height: 14px;
+
+  border: 1px solid $color-scale-border;
+  border-radius: 5px;
+}
+
+.slider__flag {
+  position: absolute;
+  top: 4px;
+  left: 6px;
+
+  width: 35px;
+  height: 6px;
+
+  background-color: $secondary-color-bg;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
 
 .slider___toggle {
   padding: 0;
@@ -37,8 +63,100 @@
   border: none;
 }
 
+.slider___toggle--before {
+  order: -2;
+}
+
 @media (min-width: $tablet-width) {
+  .slider__item {
+    left: 6px;
+  }
+
   .slider___toggle {
+    padding-bottom: 5px;
+
     @include text(20px, 20px);
+
+    border-bottom: 1px dotted $color-toggle-border;
+
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid $color-toggle-border-hover;
+    }
+
+    &:active {
+      border-bottom: none;
+    }
+  }
+
+  .slider___toggle--before {
+    &:hover + .slider___toggle--after + .slider__range .slider__flag,
+    &:focus + .slider___toggle--after + .slider__range .slider__flag {
+      box-shadow: 0 0 0 1px $color-scale-border, 0 3px 5px 1px $flag-color-bg-hover;
+    }
+  }
+
+  .slider___toggle--after {
+    &:hover + .slider__range .slider__flag,
+    &:focus + .slider__range .slider__flag {
+      box-shadow: 0 0 0 1px $color-scale-border, 0 3px 5px 1px $flag-color-bg-hover;
+    }
+
+    &:active + .slider__range .slider__flag {
+      box-shadow: 0 0 0 1px $color-scale-border, 0 4px 5px 1px $flag-color-bg-active;
+    }
+  }
+
+  .slider___controls {
+    width: 570px;
+    padding-left: 0;
+
+    @include centering();
+  }
+
+  .slider__scale {
+    width: 428px;
+    height: 6px;
+
+    background-color: $color-scale-bg;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .slider__flag {
+    position: absolute;
+    top: -13px;
+    left: 200px;
+
+    width: 8px;
+    height: 8px;
+
+    background-color: $secondary-color-bg;
+    border: 12px solid $color-main-bg;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px $color-scale-border, 0 2px 5px 1px $flag-color-bg;
+
+    box-sizing: content-box;
+
+    @include transition-time();
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 0 1px $color-scale-border, 0 3px 5px 1px $flag-color-bg-hover;
+    }
+
+    &:active {
+      box-shadow: 0 0 0 1px $color-scale-border, 0 4px 5px 1px $flag-color-bg-active;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider__item {
+    left: 41px;
+  }
+
+  .slider___controls {
+    margin-right: 0;
   }
 }

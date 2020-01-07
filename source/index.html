@@ -48,7 +48,7 @@
       </div>
     </header>
     <main class="page-main">
-      <h1 class="page-main__title visually-hidden">Интернет-магазин «Cat Energy»</h1>
+      <h1 class="visually-hidden">Интернет-магазин «Cat Energy»</h1>
       <section class="page-main__promo promo">
         <div class="promo__container">
           <div class="promo__wrap">
@@ -109,55 +109,61 @@
         </ol>
       </section>
       <section class="page-main__real-example real-example">
-        <div class="real-example__wrapper">
-          <h2 class="real-example__title main-style-title">Живой пример</h2>
-          <p class="real-example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat <br class="real-example__br"> Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
-          <table class="real-example__list">
-            <tbody class="real-example__tbody">
-              <tr class="real-example__trow real-example__trow--special">
-                <td class="real-example__tcell real-example__tcell--field real-example__tcell--title">Снижение веса</td>
-                <td class="real-example__tcell real-example__tcell--value real-example__tcell--special">5 кг</td>
-              </tr>
-              <tr class="real-example__trow real-example__trow--special">
-                <td class="real-example__tcell real-example__tcell--field real-example__tcell--title">Затрачено времени</td>
-                <td class="real-example__tcell real-example__tcell--value real-example__tcell--special">60 дней</td>
-              </tr>
-              <tr class="real-example__trow real-example__trow--costs">
-                <td class="real-example__tcell real-example__tcell--field real-example__tcell--costs">Затраты на питание:</td>
-                <td class="real-example__tcell real-example__tcell--value real-example__tcell--costs">15 000 руб.</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="real-example__container">
+          <div class="real-example__wrapper">
+            <h2 class="real-example__title main-style-title">Живой пример</h2>
+            <p class="real-example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat <br class="real-example__br"> Energy Slim. Отличный результат <br class="real-example__break"> без изнуряющих тренировок! При этом он не менял своих привычек и по&#8209прежнему спит по 16 часов в день. </p>
+            <table class="real-example__list">
+              <tbody class="real-example__tbody">
+                <tr class="real-example__trow real-example__trow--special">
+                  <td class="real-example__tcell real-example__tcell--field real-example__tcell--title">Снижение веса</td>
+                  <td class="real-example__tcell real-example__tcell--value real-example__tcell--special">5 кг</td>
+                </tr>
+                <tr class="real-example__trow real-example__trow--special">
+                  <td class="real-example__tcell real-example__tcell--field real-example__tcell--title real-example__tcell--time">Затрачено времени</td>
+                  <td class="real-example__tcell real-example__tcell--value real-example__tcell--special">60 дней</td>
+                </tr>
+                <tr class="real-example__trow real-example__trow--costs">
+                  <td class="real-example__tcell real-example__tcell--field real-example__tcell--costs">Затраты на питание:</td>
+                  <td class="real-example__tcell real-example__tcell--value real-example__tcell--costs">15 000 руб.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <section class="real-example__photo slider">
+            <h3 class="visually-hidden">Пример на фото</h3>
+            <div class="real-example__photo-box slider__list">
+              <p class="real-example__photo-wrap real-example__photo-wrap--before slider__item slider__item--before">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
+                    <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                    <img class="real-example__photo-image" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Котик до того, как начал питаться кормом «Cat Energy Slim»">
+                </picture>
+              </p>
+              <p class="real-example__photo-wrap real-example__photo-wrap--after slider__item slider__item--after">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
+                  <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                  <img class="real-example__photo-image" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Котик после того, как начал питаться кормом «Cat Energy Slim»">
+                </picture>
+              </p>
+            </div>
+            <div class="slider___controls">
+              <button class="slider___toggle slider___toggle--before" type="button">Было</button>
+              <button class="slider___toggle slider___toggle--after" type="button">Стало</button>
+              <div class="slider__range">
+                <div class="slider__scale"></div>
+                <div class="slider__flag" tabindex="0"></div>
+              </div>
+            </div>
+          </section>
         </div>
-        <section class="real-example__photo slider">
-          <h3 class="visually-hidden">Пример на фото</h3>
-          <div class="real-example__photo-box slider__list">
-            <p class="real-example__photo-wrap real-example__photo-wrap--before slider__item slider__item--before">
-              <picture>
-                <source type="image/webp" media="(min-width: 1300px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
-                  <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
-                  <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-                  <img class="real-example__photo-image" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Котик до того, как начал питаться кормом «Cat Energy Slim»">
-              </picture>
-            </p>
-            <p class="real-example__photo-wrap real-example__photo-wrap--after slider__item">
-              <picture>
-                <source type="image/webp" media="(min-width: 1300px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
-                <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
-                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
-                <img class="real-example__photo-image" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Котик после того, как начал питаться кормом «Cat Energy Slim»">
-              </picture>
-            </p>
-          </div>
-          <div class="slider___toggles">
-            <button class="slider___toggle" type="button">Было</button>
-            <button class="slider___toggle" type="button">Стало</button>
-          </div>
-        </section>
       </section>
     </main >
     <footer class="page-footer">
@@ -171,6 +177,7 @@
           </p>
         </section>
         <div class="contacts__map-wrap">
+          <iframe class="contacts__iframe-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2skz!4v1578409485119!5m2!1sru!2skz" width="320" height="362" allowfullscreen=""></iframe>
           <div class="contacts__map-box">
             <picture>
               <source type="image/webp" media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">

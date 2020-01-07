@@ -4,8 +4,14 @@
   align-items: center;
 
   @include mobile-padding();
-  padding-top: 13px;
+  padding-top: 10px;
   padding-bottom: 10px;
+
+  background-color: $color-main-bg;
+}
+
+.dealers-info--gray-bg {
+  background-color: $third-color-bg;
 }
 
 .dealers-info__title {
@@ -26,11 +32,47 @@
 }
 
 @media (min-width: $tablet-width) {
+  .dealers-info {
+    align-items: flex-start;
+
+    padding-top: 42px;
+    padding-bottom: 40px;
+
+    @include tablet-padding();
+  }
+
   .dealers-info__title {
+    padding-left: 40px;
+
     @include text(20px, 25px);
   }
 
   .dealers-info__address {
+    padding-top: 2px;
+    padding-right: 37px;
+
     @include text(16px, 20px);
+    text-align: right;
+  }
+
+  .dealers-info__street {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .dealers-info {
+    width: 570px;
+  }
+
+  .dealers-info__title {
+    padding-left: 48px;
+  }
+
+  .dealers-info__address {
+    padding-top: 3px;
+    padding-right: 54px;
+
+    text-align: left;
   }
 }

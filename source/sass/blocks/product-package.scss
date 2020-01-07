@@ -113,6 +113,10 @@
 
     border-bottom: 1px solid $color-product-package-border;
   }
+
+  .product-package__br {
+    display: none;
+  }
 }
 
 @media (min-width: $tablet-width) {

@@ -1,3 +1,17 @@
+.card {
+  border-top: 1px solid $color-nav-border;
+}
+
+.card__wrapper {
+  position: relative;
+
+  @include mobile-view();
+  padding-top: 20px;
+  padding-bottom: 24px;
+
+  @include centering();
+}
+
 .card__link {
   display: block;
 
@@ -15,24 +29,56 @@
   }
 }
 
+.card__link--title {
+  width: 85px;
+  margin-left: 50%;
+  margin-bottom: 14px;
+}
+
 .card__title {
+  margin: 0;
+
   @include text(16px, 20px);
   color: $secondary-color-text;
   text-transform: uppercase;
 }
 
 .card__link--wrap {
+  position: absolute;
+  top: 0;
+  left: 20px;
+
   width: 140px;
   height: 144px;
 }
 
 .card__description-list {
+  width: 50%;
+  margin-left: 50%;
+  margin-bottom: 23px;
+
   @include text(12px, 16px);
   font-family: $secondary-font;
+
+  border-collapse: collapse;
+}
+
+.card__description-tcell {
+  padding: 0;
+}
+
+.card__description-tcell--value {
+  text-align: right;
 }
 
 .card__make-order {
+  display: block;
+  width: 100%;
+  padding-top: 9px;
+  padding-bottom: 10px;
+
   @include text(16px, 20px);
+  text-align: center;
 }
 
 @media (min-width: $tablet-width) {

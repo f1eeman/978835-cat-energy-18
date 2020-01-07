@@ -1,16 +1,41 @@
+.ingredient {
+  padding-top: 12px;
+  padding-bottom: 17px;
+
+  border-bottom: 1px solid $color-nav-border;
+
+  &:first-child {
+    border-top: 1px solid $color-nav-border;
+  }
+}
+
 .ingredient__title {
+  margin-top: 0;
+  margin-bottom: 14px;
+
   @include text(16px, 16px);
   color: $secondary-color-text;
   text-transform: uppercase;
 }
 
 .ingredient__properties {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+  margin-bottom: 15px;
+
   @include text(14px, 14px);
   font-family: $secondary-font;
 }
 
 .ingredient__make-order {
+  display: block;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
   @include text(16px, 20px);
+  text-align: center;
 }
 
 @media (min-width: $tablet-width) {

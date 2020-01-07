@@ -1,9 +1,23 @@
+.page-main__title {
+  width: 320px;
+
+  padding-top: 15px;
+  padding-bottom: 28px;
+
+  @include mobile-padding();
+  margin: 0 auto;
+}
+
 .page-main__promo {
   margin-bottom: 22px;
 }
 
-.page-main__real-example {
-  padding-bottom: 83px;
+.page-main__additional-goods {
+  margin-bottom: 39px;
+}
+
+.page-main__special-offer {
+  margin-bottom: 36px;
 }
 
 @media (min-width: $desktop-width) {

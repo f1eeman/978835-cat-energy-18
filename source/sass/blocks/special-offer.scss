@@ -1,9 +1,28 @@
 .special-offer {
+  @include mobile-padding();
+}
+
+.special-offer__wrap {
+  width: 280px;
+  height: 289px;
+  padding-top: 187px;
+
+  @include centering();
+
   background-color: $secondary-color-bg;
+  background-image: url("../img/icon-gift.svg"), url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 50% 65px, 0 0;
+  background-size: 55px 60px, 280px 289px;
 }
 
 .special-offer__text {
+  width: 170px;
+  margin-top: 0;
+
+  @include centering();
   @include text(16px, 20px);
   font-family: $secondary-font;
   color: $third-color-text;
+  text-align: center;
 }

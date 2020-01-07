@@ -1,6 +1,6 @@
 .container {
   @include mobile-view();
-  margin: 0 auto;
+  @include centering();
 }
 
 @media (min-width: $tablet-width) {
