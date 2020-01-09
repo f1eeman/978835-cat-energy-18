@@ -54,10 +54,18 @@
     width: 162px;
     padding: 0;
   }
+
+  .copyright__link--text {
+    padding-bottom: 5px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .copyright__link--icon {
     margin-top: 5px;
+  }
+
+  .copyright__link--text {
+    padding-bottom: 0;
   }
 }

@@ -70,19 +70,36 @@
     &--active .site-list__link {
       border-bottom: 2px solid $color-main-bg;
     }
+
+    &--current .site-list__link {
+      border-bottom: 2px solid $color-nav-link-border;
+    }
   }
 
   .site-list__link {
     @include text(20px, 25px);
     color: $third-color-text;
-  }
 
-  &[href]:hover,
-  &[href]:focus {
-    color: $third-color-text-hover;
-  }
+    &[href]:hover,
+    &[href]:focus {
+      color: $third-color-text-hover;
+    }
 
-  &[href]:active {
-    color: $third-color-text-active;
+    &[href]:active {
+      color: $third-color-text-active;
+    }
+
+    &--black {
+      color: $secondary-color-text;
+
+      &[href]:hover,
+      &[href]:focus {
+        color: $secondary-color-text-hover;
+      }
+
+      &[href]:active {
+        color: $secondary-color-text-active;
+      }
+    }
   }
 }

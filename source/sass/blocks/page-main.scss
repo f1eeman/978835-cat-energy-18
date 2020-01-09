@@ -13,15 +13,36 @@
 }
 
 .page-main__additional-goods {
-  margin-bottom: 39px;
+  margin-bottom: 36px;
 }
 
-.page-main__special-offer {
-  margin-bottom: 36px;
+@media (min-width: $tablet-width) {
+  .page-main__title {
+    width: auto;
+    max-width: 1280px;
+
+    padding-top: 53px;
+    padding-bottom: 45px;
+
+    @include tablet-padding();
+    @include centering();
+  }
+
+  .page-main__additional-goods {
+    margin-bottom: 80px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .page-main__promo {
     margin-bottom: 80px;
+  }
+
+  .page-main__title {
+    padding-top: 70px;
+  }
+
+  .page-main__additional-goods {
+    margin-bottom: 85px;
   }
 }

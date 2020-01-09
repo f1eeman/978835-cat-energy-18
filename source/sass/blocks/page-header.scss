@@ -47,6 +47,10 @@
     @include centering();
   }
 
+  .page-header__container {
+    margin: 0;
+  }
+
   .page-header__main-nav {
     flex-grow: 1;
   }

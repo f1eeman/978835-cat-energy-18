@@ -1,10 +1,6 @@
-.special-offer {
-  @include mobile-padding();
-}
-
 .special-offer__wrap {
   width: 280px;
-  height: 289px;
+  min-height: 289px;
   padding-top: 187px;
 
   @include centering();
@@ -25,4 +21,48 @@
   font-family: $secondary-font;
   color: $third-color-text;
   text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .special-offer__wrap {
+    width: 708px;
+    min-height: 200px;
+    padding-top: 72px;
+    padding-left: 423px;
+
+    background-image: url("../img/icon-gift.svg"), url("../img/gift-photo-tablet@1x.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 91px 65px, 0 0;
+    background-size: 55px 60px, 708px 200px;
+  }
+
+  .special-offer__text {
+    margin: 0;
+
+    text-align: left;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .special-offer__wrap {
+    width: 245px;
+    min-height: 289px;
+
+    padding-top: 187px;
+    padding-left: 0;
+
+    @include centering();
+
+    background-color: $secondary-color-bg;
+    background-image: url("../img/icon-gift.svg"), url("../img/gift-photo-desktop@1x.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 50% 65px, 0 0;
+    background-size: 55px 60px, 245px 289px;
+  }
+
+  .special-offer__text {
+    @include centering();
+
+    text-align: center;
+  }
 }
