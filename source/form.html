@@ -59,15 +59,15 @@
               <div class="filter-form__box">
                 <p class="filter-form__wrap">
                   <label class="filter-form__label" for="user-name">Имя:*</label>
-                  <input class="filter-form__control" id="user-name" name="user-name" type="text" placeholder="Барсик" required>
+                  <input class="filter-form__control filter-form__control--data" id="user-name" name="user-name" type="text" placeholder="Барсик" required>
                 </p>
                 <p class="filter-form__wrap">
                   <label class="filter-form__label" for="user-weight">Вес (кг):*</label>
-                  <input class="filter-form__control" id="user-weight" name="user-weight" type="number" min="1" placeholder="7" required>
+                  <input class="filter-form__control filter-form__control--weight filter-form__control--data" id="user-weight" name="user-weight" type="number" min="1" placeholder="7" required>
                 </p>
                 <p class="filter-form__wrap">
                   <label class="filter-form__label" for="user-age">Возраст (лет):</label>
-                  <input class="filter-form__control" id="user-age" name="user-age" type="number" min="1" max="30" placeholder="7">
+                  <input class="filter-form__control filter-form__control--age filter-form__control--data" id="user-age" name="user-age" type="number" min="1" max="30" placeholder="7">
                 </p>
               </div>
               <ul class="filter-form__list">
@@ -87,53 +87,63 @@
             </div>
           </fieldset>
           <fieldset class="filter-form__fieldset">
-            <h3 class="filter-form__title">Контактные данные (владельца кота)</h3>
-            <p class="filter-form__wrap">
-              <label class="filter-form__label" for="user-email">Email:*</label>
-              <input class="filter-form__control" id="user-email" name="user-email" type="email" placeholder="kuklachev@gmail.com" required>
-            </p>
-            <p class="filter-form__wrap">
-              <label class="filter-form__label" for="user-tel">Телефон:*</label>
-              <input class="filter-form__control" id="user-tel" name="user-tel" type="tel" placeholder="8(960) 900-60-90" required>
-            </p>
+            <h3 class="filter-form__title filter-form__title--contact">Контактные данные <br> (владельца кота)</h3>
+            <div class="filter-form__box filter-form__box--contact">
+              <p class="filter-form__wrap">
+                <label class="filter-form__label" for="user-email">E-mail:*</label>
+                <input class="filter-form__control filter-form__control--email filter-form__control--data" id="user-email" name="user-email" type="email" placeholder="kuklachev@gmail.com" required>
+                <svg class="filter-form__icon filter-form__icon--email" width="17" height="13">
+                  <use xlink:href="img/sprite.svg#icon-mail"></use>
+                </svg>
+              </p>
+              <p class="filter-form__wrap">
+                <label class="filter-form__label" for="user-tel">Телефон:*</label>
+                <input class="filter-form__control filter-form__control--tel filter-form__control--data" id="user-tel" name="user-tel" type="tel" placeholder="8 (960) 900-60-90" required>
+                <svg class="filter-form__icon filter-form__icon--tel" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-phone"></use>
+                </svg>
+              </p>
+            </div>
           </fieldset>
           <fieldset class="filter-form__fieldset">
-            <h3 class="filter-form__title">Комментарий</h3>
-            <p class="filter-form__wrap">
+            <h3 class="filter-form__title filter-form__title--comment">Комментарий</h3>
+            <p class="filter-form__wrap filter-form__wrap--box">
               <label class="filter-form__label filter-form__label--textarea visually-hidden" for="user-comment">Комментарий:</label>
               <textarea class="filter-form__control filter-form__control--textarea" name="user-comment" id="user-comment" placeholder="Расскажите обо всех повадках кота"></textarea>
             </p>
           </fieldset>
           <fieldset class="filter-form__fieldset">
-            <h3 class="filter-form__title">Дополнительно</h3>
-            <ul class="filter-form__list">
-              <li class="filter-form__item">
+            <h3 class="filter-form__title filter-form__title--plus">Дополнительно</h3>
+            <ul class="filter-form__list filter-form__list--plus">
+              <li class="filter-form__item filter-form__item--plus">
                 <input class="filter-form__control filter-form__control--checkbox visually-hidden" id="sweetener" name="sweetener" type="checkbox" checked>
                 <label class="filter-form__label filter-form__label--checkbox" for="sweetener">Сахарозаменитель</label>
               </li>
-              <li class="filter-form__item">
+              <li class="filter-form__item filter-form__item--plus">
                 <input class="filter-form__control filter-form__control--checkbox visually-hidden" id="water" name="water" type="checkbox">
                 <label class="filter-form__label filter-form__label--checkbox" for="water">Питьевая вода</label>
               </li>
-              <li class="filter-form__item">
+              <li class="filter-form__item filter-form__item--plus">
                 <input class="filter-form__control filter-form__control--checkbox visually-hidden" id="milk" name="milk" type="checkbox">
                 <label class="filter-form__label filter-form__label--checkbox" for="milk">Молоко</label>
               </li>
-              <li class="filter-form__item">
+              <li class="filter-form__item filter-form__item--plus">
                 <input class="filter-form__control filter-form__control--checkbox visually-hidden" id="vitamins" name="vitamins" type="checkbox">
                 <label class="filter-form__label filter-form__label--checkbox" for="vitamins">Витамины</label>
               </li>
             </ul>
           </fieldset>
-          <button class="filter-form__button button" type="submit">Отправить заявку</button>
-          <p class="filter-form__note">* — Обязательные поля</p>
+          <div class="filter-form__box filter-form__box--button">
+            <button class="filter-form__button button" type="submit">Отправить заявку</button>
+            <p class="filter-form__note">* — Обязательные поля</p>
+          </div>
         </form>
       </section>
     </main>
     <footer class="page-footer">
       <section class="page-footer__contacts contacts">
         <h2 class="contacts__title visually-hidden">Контакты</h2>
-        <section class="contacts__dealers dealers-info">
+        <section class="contacts__dealers dealers-info dealers-info--gray-bg">
           <h3 class="dealers-info__title">Приглашаем <br> к сотрудничеству <br> дилеров!</h3>
           <p class="dealers-info__address">
             <span class="dealers-info__street">ул. Большая <br> Конюшенная, д. 19/8</span>
