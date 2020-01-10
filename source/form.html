@@ -51,39 +51,40 @@
       <h1 class="page-main__title main-style-title">Подбор программы</h1>
       <section class="page-main__filters filters">
         <h2 class="filters__title visually-hidden">Форма заказа</h2>
-        <p class="filters__info">Заполните анкету и мы подберем  программу питания для вашего кота</p>
+        <p class="filters__info">Заполните анкету и мы подберем <br> программу питания для вашего кота</p>
         <form class="filters__filter-form filter-form" action="https://echo.htmlacademy.ru" method="POST">
           <fieldset class="filter-form__fieldset">
-            <h3 class="filter-form__title visually-hidden">Данные котика</h3>
-            <p class="filter-form__wrap">
-              <label class="filter-form__label" for="user-name">Имя:*</label>
-              <input class="filter-form__control" id="user-name" name="user-name" type="text" placeholder="Барсик" required>
-            </p>
-            <p class="filter-form__wrap">
-              <label class="filter-form__label" for="user-weight">Вес(кг):*</label>
-              <input class="filter-form__control" id="user-weight" name="user-weight" type="number" min="1" placeholder="7" required>
-            </p>
-            <p class="filter-form__wrap">
-              <label class="filter-form__label" for="user-age">Возраст (лет):</label>
-              <input class="filter-form__control" id="user-age" name="user-age" type="number" min="1" max="30" placeholder="7">
-            </p>
-          </fieldset>
-          <fieldset class="filter-form__fieldset">
-            <h3 class="filter-form__title visually-hidden">Выбор программы</h3>
-            <ul class="filter-form__list">
-              <li class="filter-form__item">
-                <input class="filter-form__control filter-form__control--radio visually-hidden" id="losing-weight" name="nutrition-program" type="radio"  value="losing-weight" checked>
-                <label class="filter-form__label filter-form__label--radio" for="losing-weight">Похудение</label>
-              </li>
-              <li class="filter-form__item">
-                <input class="filter-form__control filter-form__control--radio visually-hidden" id="muscle-gain" name="nutrition-program" type="radio" value="muscle-gain">
-                <label class="filter-form__label filter-form__label--radio" for="muscle-gain">Набор массы</label>
-              </li>
-              <li class="filter-form__item">
-                <input class="filter-form__control filter-form__control--radio visually-hidden" id="need-advice" name="nutrition-program" type="radio" value="need-advice">
-                <label class="filter-form__label filter-form__label--radio" for="need-advice">Не знаю (нужен ваш совет)</label>
-              </li>
-            </ul>
+            <h3 class="filter-form__title visually-hidden">Данные котика и выбор программы</h3>
+            <div class="filter-form__container">
+              <div class="filter-form__box">
+                <p class="filter-form__wrap">
+                  <label class="filter-form__label" for="user-name">Имя:*</label>
+                  <input class="filter-form__control" id="user-name" name="user-name" type="text" placeholder="Барсик" required>
+                </p>
+                <p class="filter-form__wrap">
+                  <label class="filter-form__label" for="user-weight">Вес (кг):*</label>
+                  <input class="filter-form__control" id="user-weight" name="user-weight" type="number" min="1" placeholder="7" required>
+                </p>
+                <p class="filter-form__wrap">
+                  <label class="filter-form__label" for="user-age">Возраст (лет):</label>
+                  <input class="filter-form__control" id="user-age" name="user-age" type="number" min="1" max="30" placeholder="7">
+                </p>
+              </div>
+              <ul class="filter-form__list">
+                <li class="filter-form__item">
+                  <input class="filter-form__control filter-form__control--radio visually-hidden" id="losing-weight" name="nutrition-program" type="radio"  value="losing-weight" checked>
+                  <label class="filter-form__label filter-form__label--radio" for="losing-weight">Похудение</label>
+                </li>
+                <li class="filter-form__item">
+                  <input class="filter-form__control filter-form__control--radio visually-hidden" id="muscle-gain" name="nutrition-program" type="radio" value="muscle-gain">
+                  <label class="filter-form__label filter-form__label--radio" for="muscle-gain">Набор массы</label>
+                </li>
+                <li class="filter-form__item">
+                  <input class="filter-form__control filter-form__control--radio visually-hidden" id="need-advice" name="nutrition-program" type="radio" value="need-advice">
+                  <label class="filter-form__label filter-form__label--radio" for="need-advice">Не знаю (нужен ваш совет)</label>
+                </li>
+              </ul>
+            </div>
           </fieldset>
           <fieldset class="filter-form__fieldset">
             <h3 class="filter-form__title">Контактные данные (владельца кота)</h3>

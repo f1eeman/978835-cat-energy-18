@@ -5,6 +5,22 @@
   border: none;
 }
 
+.filter-form__box {
+  @include mobile-padding();
+  margin-bottom: 23px;
+}
+
+.filter-form__wrap {
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 13px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .filter-form__title {
   @include text(24px, 24px);
   color: $secondary-color-text;
@@ -12,15 +28,101 @@
 
 .filter-form__label {
   @include text(16px, 18px);
-  color: $secondary-color-text;
+  color: $fourth-color-text;
   text-transform: uppercase;
 }
 
 .filter-form__control {
+  flex-grow: 1;
+  padding: 12px;
+  margin-left: 15px;
+
+  @include text(16px, 18px);
+  font-family: $main-font;
+  text-transform: uppercase;
+  color: $fourth-color-text;
+
   &::placeholder {
     @include text(16px, 18px);
     font-family: $main-font;
     text-transform: uppercase;
+    color: $fourth-color-text;
+  }
+}
+
+.filter-form__list {
+  @include list-reset();
+  @include mobile-padding();
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  border-top: 1px solid $color-form-border;
+  border-bottom: 1px solid $color-form-border;
+}
+
+.filter-form__item {
+  padding-left: 45px;
+  margin-bottom: 3px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.filter-form__control--radio {
+  &:checked + .filter-form__label--radio {
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 14px;
+      left: -36px;
+
+      display: block;
+      width: 12px;
+      height: 12px;
+
+      background-color: $secondary-color-bg;
+      border-radius: 50%;
+    }
+  }
+
+  &:active + .filter-form__label--radio {
+    color: $fourth-color-text-active;
+
+    &::before {
+      border-color: $color-list-border-active;
+    }
+
+    &::after {
+      background-color: $secondary-color-bg-active;
+    }
+  }
+}
+
+.filter-form__label--radio {
+  position: relative;
+
+  display: block;
+  min-height: 40px;
+  padding-top: 10px;
+
+  cursor: pointer;
+  user-select: none;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 5px;
+    left: -45px;
+
+    display: block;
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid $color-list-border;
+    border-radius: 50%;
   }
 }
 
