@@ -40,6 +40,11 @@
   }
 }
 
+.filter-form__title-wrap {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .filter-form__title {
   position: relative;
 
@@ -92,7 +97,7 @@
 .filter-form__title-text {
   position: relative;
 
-  background-color: $color-main-bg;
+  background-color: transparent;
 }
 
 .filter-form__list {
@@ -122,12 +127,6 @@
   &:last-child {
     margin-bottom: 0;
   }
-}
-
-.filter-form__label {
-  @include text(16px, 18px);
-  color: $fourth-color-text;
-  text-transform: uppercase;
 }
 
 .filter-form__control {
@@ -172,10 +171,12 @@
   }
 
   &--email {
+    padding-right: 50px;
     margin-left: 12px;
   }
 
   &--tel {
+    padding-right: 50px;
     margin-left: 10px;
   }
 
@@ -215,6 +216,12 @@
       background-color: $secondary-color-bg-active;
     }
   }
+}
+
+.filter-form__label {
+  @include text(16px, 18px);
+  color: $fourth-color-text;
+  text-transform: uppercase;
 }
 
 .filter-form__label--radio {
@@ -357,25 +364,345 @@
 }
 
 @media (min-width: $tablet-width) {
-  .filter-form__title {
-    @include text(36px, 36px);
+  .filter-form__br {
+    display: none;
+  }
+
+  .filter-form__container {
+    max-width: 1280px;
+
+    @include tablet-form-padding();
+    margin-bottom: 46px;
+
+    @include centering();
+  }
+
+  .filter-form__box {
+    padding: 0;
+
+    &--data {
+      margin-bottom: 72px;
+    }
+
+    &--contact {
+      max-width: 1280px;
+
+      @include tablet-form-padding();
+      margin-bottom: 37px;
+
+      @include centering();
+    }
+
+    &--button {
+      display: flex;
+      align-items: center;
+      max-width: 1280px;
+
+      @include tablet-form-padding();
+      margin-bottom: 55px;
+
+      @include centering();
+    }
+  }
+
+  .filter-form__wrapper {
+    max-width: 1280px;
+
+    @include tablet-form-padding();
+    margin-bottom: 25px;
+
+    @include centering();
+  }
+
+  .filter-form__list {
+    padding-top: 23px;
+
+    border: 1px solid $color-form-border;
+
+    &--plus {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+
+      margin-left: -60px;
+
+      border: none;
+    }
+  }
+
+  .filter-form__item {
+    padding-left: 67px;
+
+    &--plus {
+      width: 285px;
+      padding-left: 58px;
+      margin-left: 60px;
+      margin-bottom: 21px;
+    }
+  }
+
+  .filter-form__wrap {
+    margin-bottom: 19px;
+
+    &--box {
+      max-width: 1280px;
+
+      @include tablet-form-padding();
+      padding-bottom: 40px;
+
+      @include centering();
+    }
+  }
+
+  .filter-form__control {
+    padding-top: 10px;
+    padding-right: 18px;
+    padding-left: 18px;
+    padding-bottom: 11px;
+    margin-left: 17px;
+
+    @include text(20px, 20px);
+
+    &::placeholder {
+      @include text(20px, 20px);
+    }
+
+    &--weight {
+      padding-left: 17px;
+      margin-left: 21px;
+    }
+
+    &--email {
+      padding-left: 17px;
+      margin-left: 21px;
+    }
+
+    &--tel {
+      padding-left: 17px;
+      margin-left: 15px;
+    }
+
+    &--textarea {
+      min-height: 175px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      margin-left: 0;
+    }
   }
 
   .filter-form__label {
     @include text(20px, 20px);
   }
 
-  .filter-form__control {
-    &::placeholder {
-      @include text(20px, 20px);
+  .filter-form__control--radio {
+    &:checked + .filter-form__label--radio {
+      &::after {
+        top: 13px;
+        left: -48px;
+
+        width: 18px;
+        height: 18px;
+      }
     }
   }
 
+  .filter-form__label--radio {
+    min-height: 50px;
+    padding-top: 10px;
+
+    &::before {
+      top: 2px;
+      left: -59px;
+
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .filter-form__control--checkbox {
+    &:checked + .filter-form__label--checkbox {
+      &::after {
+        left: -48px;
+      }
+    }
+  }
+
+  .filter-form__label--checkbox {
+    min-height: 50px;
+    padding-top: 9px;
+
+    &::before {
+      top: 0;
+      left: -58px;
+
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .filter-form__title-wrap {
+    max-width: 1280px;
+
+    @include tablet-padding();
+    @include centering();
+  }
+
+  .filter-form__title {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 76px;
+
+    @include text(36px, 36px);
+
+    &::before {
+      top: 50px;
+      right: 0;
+      left: 0;
+    }
+
+    &--comment {
+      margin-bottom: 70px;
+    }
+
+    &--plus {
+      margin-bottom: 56px;
+
+      &::before {
+        top: 43px;
+      }
+    }
+  }
+
+  .filter-form__title-text {
+    padding-left: 40px;
+    padding-right: 43px;
+
+    background-color: $color-main-bg;
+
+    z-index: 1;
+  }
+
+  .filter-form__icon {
+    top: 20px;
+    right: 19px;
+  }
+
+  .filter-form__icon--tel {
+    top: 18px;
+    right: 16px;
+  }
+
   .filter-form__button {
+    width: 283px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-right: 60px;
+
     @include text(20px, 20px);
   }
 
   .filter-form__note {
+    padding-top: 10px;
+    padding-left: 1px;
+
     @include text(16px, 16px);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filters__info {
+    @include tablet-padding();
+  }
+
+  .filter-form__container {
+    display: flex;
+
+    @include tablet-padding();
+  }
+
+  .filter-form__box {
+    &--data {
+      width: 570px;
+      margin-right: 80px;
+      margin-bottom: 0;
+    }
+
+    &--contact {
+      display: flex;
+
+      @include tablet-padding();
+    }
+
+    &--button {
+      @include tablet-padding();
+
+      margin-bottom: 65px;
+    }
+  }
+
+  .filter-form__wrap {
+    &--contact {
+      width: 570px;
+      margin-right: 80px;
+      margin-bottom: 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &--box {
+      @include tablet-padding();
+    }
+  }
+
+  .filter-form__wrapper {
+    @include tablet-padding();
+  }
+
+  .filter-form__list {
+    width: 570px;
+
+    &--plus {
+      width: auto;
+      margin-left: -80px;
+      margin-bottom: 33px;
+    }
+  }
+
+  .filter-form__item {
+    &--plus {
+      width: 245px;
+      margin-left: 80px;
+    }
+  }
+
+  .filter-form__title-wrap {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .filter-form__title {
+    &--contact {
+      padding-top: 23px;
+
+      &::before {
+        top: 45px;
+      }
+    }
+
+    &--comment {
+      margin-bottom: 72px;
+    }
+  }
+
+  .filter-form__title-text {
+    padding-left: 30px;
+    padding-right: 42px;
+  }
+
+  .filter-form__button {
+    width: 570px;
+    margin-right: 80px;
   }
 }

@@ -74,3 +74,8 @@
   padding-left: $padding-left;
   padding-right: $padding-right;
 }
+
+@mixin tablet-form-padding($padding-left: 70px, $padding-right: 67px) {
+  padding-left: $padding-left;
+  padding-right: $padding-right;
+}

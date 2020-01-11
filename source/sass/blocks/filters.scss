@@ -9,6 +9,20 @@
 
 @media (min-width: $tablet-width) {
   .filters__info {
+    max-width: 1280px;
+
+    @include tablet-form-padding();
+    padding-top: 12px;
+
+    @include centering();
+    margin-bottom: 64px;
+
     @include text(20px, 30px);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filters__info {
+    @include tablet-padding();
   }
 }
