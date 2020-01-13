@@ -29,6 +29,13 @@
     background-repeat: no-repeat;
     background-position: center 0, 0 0;
     background-size: 320px 305px, 100% 305px;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/index-background-mobile@2x.jpg"), linear-gradient($promo-color-bg);
+      background-repeat: no-repeat;
+      background-position: center 0, 0 0;
+      background-size: 320px 305px, 100% 305px;
+    }
   }
 
   .promo__container {
@@ -129,6 +136,10 @@
       background-repeat: no-repeat;
       background-position: 0 175px;
       background-size: 720px 696px;
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+      }
     }
   }
 
