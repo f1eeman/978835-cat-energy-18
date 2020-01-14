@@ -95,6 +95,10 @@
   .main-nav--nojs .main-nav__wrap {
     display: none;
   }
+
+  .main-nav--nojs .main-nav__list {
+    display: block;
+  }
 }
 
 .main-nav__list {

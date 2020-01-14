@@ -43,10 +43,14 @@
   text-transform: uppercase;
 }
 
-.card__description-list {
+.card__wrap-description-list {
   width: 50%;
   margin-left: 50%;
   margin-bottom: 23px;
+}
+
+.card__description-list {
+  width: 100%;
 
   @include text(12px, 16px);
   font-family: $secondary-font;
@@ -135,12 +139,15 @@
     height: 208px;
   }
 
-  .card__description-list {
-    width: auto;
-    margin-left: 37px;
-    margin-right: 37px;
+  .card__wrap-description-list {
+    width: 100%;
+    padding-left: 37px;
+    padding-right: 37px;
+    margin-left: 0;
     margin-bottom: 33px;
+  }
 
+  .card__description-list {
     @include text(16px, 16px);
   }
 

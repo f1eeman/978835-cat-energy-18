@@ -1,5 +1,9 @@
 .promo__title {
+  width: 280px;
   margin-top: 0;
+
+  @include centering();
+
   margin-bottom: 25px;
 
   @include text(36px, 36px, 400);
@@ -77,6 +81,9 @@
     position: relative;
     z-index: 1;
 
+    width: 457px;
+    margin-right: 0;
+    margin-left: 0;
     margin-bottom: 40px;
 
     @include text(60px, 60px, 400);

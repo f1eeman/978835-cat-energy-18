@@ -129,7 +129,7 @@
 
   .advantages__item {
     display: block;
-    width: 245px;
+    width: 29%;
     min-height: 228px;
     padding-top: 113px;
     padding-left: 0;
@@ -169,13 +169,6 @@
 
   .advantages__br {
     display: inline;
-  }
-}
-
-@media (min-width: 790px) {
-  .advantages__item {
-    flex-shrink: 0;
-    flex-grow: 1;
   }
 }
 

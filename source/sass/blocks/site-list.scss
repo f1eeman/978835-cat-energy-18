@@ -4,10 +4,6 @@
   list-style: none;
 }
 
-.site-list__item--active .site-list__link {
-  border-bottom: 2px solid $color-nav-link-border;
-}
-
 .site-list__link {
   @include text(20px, 20px, 500);
 
@@ -43,6 +39,10 @@
 
   .site-list__item {
     margin-left: 36px;
+
+    &--active .site-list__link {
+      border-bottom: 2px solid $color-nav-link-border;
+    }
 
     &:first-child {
       margin-left: auto;

@@ -1,28 +1,36 @@
-.filters__info {
+.filters__info-box {
   @include mobile-padding();
-  margin-top: 0;
   margin-bottom: 35px;
 
   color: $secondary-color-text;
   text-transform: uppercase;
 }
 
-@media (min-width: $tablet-width) {
-  .filters__info {
-    max-width: 1280px;
+.filters__info {
+  width: 240px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
-    @include tablet-form-padding();
+@media (min-width: $tablet-width) {
+  .filters__info-box {
+    max-width: 1280px;
     padding-top: 12px;
 
+    @include tablet-form-padding();
     @include centering();
     margin-bottom: 64px;
 
     @include text(20px, 30px);
   }
+
+  .filters__info {
+    width: 346px;
+  }
 }
 
 @media (min-width: $desktop-width) {
-  .filters__info {
+  .filters__info-box {
     @include tablet-padding();
   }
 }

@@ -41,8 +41,7 @@
 }
 
 .filter-form__title-wrap {
-  margin-top: 0;
-  margin-bottom: 0;
+  display: block;
 }
 
 .filter-form__title {
@@ -157,7 +156,30 @@
     @include text(16px, 18px);
     font-family: $main-font;
     text-transform: uppercase;
-    color: $fourth-color-text;
+    color: $main-color-text;
+
+    opacity: 1;
+  }
+
+  &--number[type="number"] {
+    appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      appearance: none;
+    }
+  }
+
+  &--data {
+    height: 46px;
+
+    &:focus:invalid {
+      outline: 2px solid $color-error-border;
+    }
+
+    &:focus:invalid + .filter-form__icon {
+      fill: $color-error-border;
+    }
   }
 
   &--weight {
@@ -184,6 +206,9 @@
     width: 100%;
     min-height: 150px;
     margin: 0;
+
+    resize: none;
+    overflow: auto;
   }
 }
 
@@ -328,6 +353,8 @@
 
   top: 18px;
   right: 16px;
+
+  fill: $form-icon-color-bg;
 }
 
 .filter-form__icon--email {
@@ -363,11 +390,14 @@
   text-align: center;
 }
 
-@media (min-width: $tablet-width) {
-  .filter-form__br {
-    display: none;
+@media (max-width: $mobile-width-only) {
+  .filter-form__title-text--contact {
+    display: block;
+    width: 196px;
   }
+}
 
+@media (min-width: $tablet-width) {
   .filter-form__container {
     max-width: 1280px;
 
@@ -467,6 +497,10 @@
       @include text(20px, 20px);
     }
 
+    &--data {
+      height: 53px;
+    }
+
     &--weight {
       padding-left: 17px;
       margin-left: 21px;
@@ -474,11 +508,13 @@
 
     &--email {
       padding-left: 17px;
+      padding-right: 50px;
       margin-left: 21px;
     }
 
     &--tel {
       padding-left: 17px;
+      padding-right: 50px;
       margin-left: 15px;
     }
 
@@ -610,10 +646,6 @@
 }
 
 @media (min-width: $desktop-width) {
-  .filters__info {
-    @include tablet-padding();
-  }
-
   .filter-form__container {
     display: flex;
 
