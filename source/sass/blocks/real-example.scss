@@ -226,6 +226,8 @@
   .real-example__photo-wrap {
     width: 690px;
     height: 517px;
+
+    background-image: linear-gradient(180deg, $color-main-bg 167px, $third-color-bg 167px);
   }
 }
 
@@ -281,6 +283,10 @@
     &:last-child {
       margin-left: 65px;
     }
+  }
+
+  .real-example__photo-wrap {
+    background-image: linear-gradient(180deg, $color-main-bg 190px, $third-color-bg 190px);
   }
 
   .real-example__photo {
