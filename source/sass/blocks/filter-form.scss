@@ -157,6 +157,11 @@
     outline-offset: 2px;
   }
 
+  &:disabled {
+    background-color: $color-disabled-bg;
+    opacity: 0.5;
+  }
+
   &::placeholder {
     @include text(16px, 18px);
     font-family: $main-font;
