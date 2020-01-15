@@ -29,6 +29,8 @@
 }
 
 .copyright__link--icon {
+  @include ie-bug-fix();
+
   &:hover .copyright__icon,
   &:focus .copyright__icon {
     fill: $secondary-color-bg;

@@ -152,6 +152,11 @@
     fill: $secondary-color-bg;
   }
 
+  &:focus + .filter-form__label::before {
+    outline: thin dotted blue;
+    outline-offset: 2px;
+  }
+
   &::placeholder {
     @include text(16px, 18px);
     font-family: $main-font;
@@ -661,6 +666,7 @@
 
     &--contact {
       display: flex;
+      flex-wrap: wrap;
 
       @include tablet-padding();
     }

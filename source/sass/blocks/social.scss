@@ -19,6 +19,8 @@
 
   text-align: center;
 
+  @include ie-bug-fix();
+
   &:hover,
   &:focus {
     .social__icon {
@@ -85,6 +87,10 @@
 
   .social__link {
     width: 32px;
+
+    &--instagram {
+      text-align: right;
+    }
   }
 
   .social__icon--vkontakte {

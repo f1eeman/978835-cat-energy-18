@@ -22,6 +22,30 @@
   margin-left: -160px;
 
   overflow: hidden;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 62px;
+    height: 53px;
+    margin-left: -31px;
+    margin-top: -40px;
+
+    background-image: url("../img/map-pin.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .contacts__map-image {
+    margin-top: -36px;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -38,6 +62,13 @@
     width: 767px;
     height: 400px;
     margin-left: -384px;
+
+    &::after {
+      width: 124px;
+      height: 106px;
+      margin-top: -53px;
+      margin-left: -62px;
+    }
   }
 }
 
@@ -48,7 +79,7 @@
 
   .contacts__dealers-box {
     position: absolute;
-    top: 90px;
+    top: 95px;
     left: 50%;
     right: auto;
 
@@ -64,6 +95,13 @@
   .contacts__map-box {
     width: 1440px;
     margin-left: -720px;
+
+    &::after {
+      left: auto;
+      right: 320px;
+
+      margin-left: 0;
+    }
   }
 
   .contacts__dealers {

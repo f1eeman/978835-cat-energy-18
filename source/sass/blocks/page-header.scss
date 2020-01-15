@@ -11,6 +11,8 @@
   &[href]:active {
     opacity: 0.6;
   }
+
+  @include ie-bug-fix();
 }
 
 @media (max-width: $mobile-width-only) {

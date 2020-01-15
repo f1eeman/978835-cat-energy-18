@@ -10,6 +10,7 @@
 }
 
 .ingredient__title {
+  width: 150px;
   margin-top: 0;
   margin-bottom: 14px;
 
@@ -52,6 +53,7 @@
   }
 
   .ingredient__title {
+    width: 200px;
     margin-bottom: 26px;
 
     @include text(20px, 20px);
@@ -90,6 +92,7 @@
   }
 
   .ingredient__title {
+    width: 245px;
     margin-bottom: 0;
   }
 
