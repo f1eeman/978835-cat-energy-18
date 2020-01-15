@@ -158,8 +158,11 @@
   }
 
   &:disabled {
-    background-color: $color-disabled-bg;
-    opacity: 0.5;
+    @include disabled();
+  }
+
+  &:disabled + .filter-form__label {
+    @include label-disabled();
   }
 
   &::placeholder {
@@ -389,6 +392,12 @@
   font-family: $main-font;
 
   border: none;
+
+  &:disabled {
+    @include disabled();
+
+    cursor: default;
+  }
 }
 
 .filter-form__note {

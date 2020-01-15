@@ -24,6 +24,16 @@
   border: none;
 }
 
+@mixin disabled {
+  background-color: $color-disabled-bg;
+  opacity: 0.5;
+}
+
+@mixin label-disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
 //Лечит проблему поведения SVG элемента, как ссылки, при нажатии в IE11
 @mixin ie-bug-fix() {
   position: relative;
