@@ -395,7 +395,6 @@
 
   &:disabled {
     @include disabled();
-
     cursor: default;
   }
 }
