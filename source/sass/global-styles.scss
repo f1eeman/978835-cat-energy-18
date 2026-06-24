@@ -13,6 +13,10 @@ body {
   background-color: $color-main-bg;
 }
 
+body {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
 img {
   @include size-img();
 }
