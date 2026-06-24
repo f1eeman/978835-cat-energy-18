@@ -95,13 +95,5 @@ gulp.task("server", function () {
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
 
-gulp.task("vendor-js", function () {
-  return gulp.src([
-    "node_modules/three/build/three.module.min.js",
-    "node_modules/gsap/dist/gsap.min.js"
-  ])
-  .pipe(gulp.dest("build/js/vendor"));
-});
-
-gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html", "vendor-js"));
+gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html"));
 gulp.task("start", gulp.series("build", "server"));
