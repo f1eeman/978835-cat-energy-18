@@ -53,6 +53,7 @@
             <h2 class="promo__title">Функциональное питание для котов</h2>
             <p class="promo__slogan">Занялся собой? Займись котом!</p>
             <div class="promo__image-box">
+              <canvas id="cat3d" class="promo__cat3d"></canvas>
               <picture>
                 <source type="image/webp" media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.webp 1x, img/index-can-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/index-can-tablet@1x.webp 1x, img/index-can-tablet@2x.webp 2x">
@@ -239,5 +240,7 @@
       </section>
     </footer>
     <script src="js/scripts.js"></script>
+    <script src="js/vendor/gsap.min.js"></script>
+    <script type="module" src="js/cat3d.js"></script>
   </body>
 </html>

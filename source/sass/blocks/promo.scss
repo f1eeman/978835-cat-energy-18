@@ -1,3 +1,15 @@
+.promo__image-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.promo__cat3d {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .promo__title {
   width: 280px;
   margin-top: 0;
