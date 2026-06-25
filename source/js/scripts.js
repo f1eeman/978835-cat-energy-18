@@ -28,3 +28,20 @@ if (promoImage && window.gsap && !window.matchMedia("(prefers-reduced-motion: re
     );
   });
 }
+
+var catSlim = document.querySelector(".product-package__cat--slim");
+var catPro = document.querySelector(".product-package__cat--pro");
+
+if (catSlim && catPro && window.gsap && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  window.gsap.timeline({ repeat: -1 })
+    .to(catSlim, { y: -40, duration: 0.35, ease: "power2.out" })
+    .to(catSlim, { y: -40, duration: 0.15, ease: "none" })
+    .to(catSlim, { y: 0, duration: 0.30, ease: "bounce.out" })
+    .to(catSlim, { y: 0, duration: 1.20, ease: "none" });
+
+  window.gsap.timeline({ repeat: -1 })
+    .to(catPro, { x: 12, y: -6, duration: 0.22, ease: "sine.inOut" })
+    .to(catPro, { x: 0, y: 0, duration: 0.22, ease: "sine.inOut" })
+    .to(catPro, { x: -5, y: -3, duration: 0.18, ease: "sine.inOut" })
+    .to(catPro, { x: 0, y: 0, duration: 0.18, ease: "sine.inOut" });
+}
